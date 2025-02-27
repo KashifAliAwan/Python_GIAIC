@@ -1,33 +1,81 @@
-class QuizApp:
-    def __init__(self, questions):
-        self.questions = questions
-        self.score = 0
+import streamlit as st
 
-    def display_question(self, question, options):
-        print(question)
-        for idx, option in enumerate(options, start=1):
-            print(f"{idx}. {option}")
-        user_answer = input("Your answer (enter the number): ")
-        return int(user_answer)
+# Quiz questions
+questions = [
+    {
+        "question": "What is the capital of France?",
+        "options": ["Paris", "London", "Berlin", "Madrid"],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+        "answer": "Mars"
+    },
+    {
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "4"
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+        "answer": "William Shakespeare"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        "answer": "Pacific Ocean"
+    }
+]
 
-    def run_quiz(self):
-        for question, options, correct_answer in self.questions:
-            user_answer = self.display_question(question, options)
-            if user_answer == correct_answer:
-                print("Correct!\n")
-                self.score += 1
-            else:
-                print(f"Wrong! The correct answer was {correct_answer}: {options[correct_answer-1]}\n")
-        print(f"Quiz ended! Your final score is {self.score}/{len(self.questions)}")
+# Initialize session state for score and current question
+if "score" not in st.session_state:
+    st.session_state.score = 0
+if "current_question" not in st.session_state:
+    st.session_state.current_question = 0
 
+# Display the current question
+def display_question():
+    question_data = questions[st.session_state.current_question]
+    st.write(f"**Question {st.session_state.current_question + 1}:** {question_data['question']}")
+    
+    # Display options as buttons
+    user_answer = st.radio("Select your answer:", question_data["options"], key=f"question_{st.session_state.current_question}")
+    
+    # Submit button
+    if st.button("Submit"):
+        if user_answer == question_data["answer"]:
+            st.session_state.score += 1
+            st.success("Correct! 🎉")
+        else:
+            st.error(f"Wrong! The correct answer is: {question_data['answer']}")
+        
+        # Move to the next question
+        st.session_state.current_question += 1
+        
+        # Reset the radio button selection
+        st.session_state[f"question_{st.session_state.current_question}"] = None
+
+# Check if the quiz is finished
+def quiz_finished():
+    if st.session_state.current_question >= len(questions):
+        st.write("## Quiz Finished!🎉")
+        st.write(f"### Your final score is: {st.session_state.score}/{len(questions)}")
+        if st.button("Restart Quiz"):
+            st.session_state.score = 0
+            st.session_state.current_question = 0
+        return True
+    return False
+
+# Main app logic
+def main():
+    st.title("Python Quiz App 🐍")
+    st.write("Test your knowledge with this fun quiz!")
+    
+    if not quiz_finished():
+        display_question()
+
+# Run the app
 if __name__ == "__main__":
-    questions = [
-        ("What is the capital of France?", ["Paris", "London", "Berlin", "Madrid"], 1),
-        ("Which planet is known as the Red Planet?", ["Earth", "Mars", "Jupiter", "Saturn"], 2),
-        ("What is 2 + 2?", ["3", "4", "5", "6"], 2),
-        ("Who wrote 'Romeo and Juliet'?", ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"], 2),
-        ("What is the largest ocean on Earth?", ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], 4)
-    ]
-
-    quiz = QuizApp(questions)
-    quiz.run_quiz()
+    main()
