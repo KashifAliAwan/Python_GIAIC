@@ -55,4 +55,24 @@ conversion_type = st.selectbox(
     "Select Conversion Type", ["Length", "Weight", "Temperature"]
 )
 
+if conversion_type == "Length":
+    units = [
+        "meter",
+        "kilometer",
+        "centimeter",
+        "millimeter",
+        "inch",
+        "foot",
+        "yard",
+        "mile",
+    ]
+elif conversion_type == "Weight":
+    units = ["gram", "kilogram", "milligram", "pound", "ounce"]
+elif conversion_type == "Temperature":
+    units = ["celsius", "fahrenheit", "kelvin"]
+
+# Input value and units
+value = st.number_input("Enter value", value=1.0)
+from_unit = st.selectbox("From unit", units)
+to_unit = st.selectbox("To unit", units)
 
