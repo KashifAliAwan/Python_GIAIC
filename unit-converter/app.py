@@ -27,3 +27,20 @@ def convert_weight(value, from_unit, to_unit):
     return value * (weight_conversions[from_unit] / weight_conversions[to_unit])
 
 
+def convert_temperature(value, from_unit, to_unit):
+    if from_unit == "celsius" and to_unit == "fahrenheit":
+        return (value * 9 / 5) + 32
+    elif from_unit == "fahrenheit" and to_unit == "celsius":
+        return (value - 32) * 5 / 9
+    elif from_unit == "celsius" and to_unit == "kelvin":
+        return value + 273.15
+    elif from_unit == "kelvin" and to_unit == "celsius":
+        return value - 273.15
+    elif from_unit == "fahrenheit" and to_unit == "kelvin":
+        return (value - 32) * 5 / 9 + 273.15
+    elif from_unit == "kelvin" and to_unit == "fahrenheit":
+        return (value - 273.15) * 9 / 5 + 32
+    else:
+        return value
+
+
