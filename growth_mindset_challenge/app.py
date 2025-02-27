@@ -7,7 +7,10 @@ import importlib.util
 
 # Check if openpyxl is installed
 if not importlib.util.find_spec("openpyxl"):
-    st.error("The 'openpyxl' library is required to read Excel files. Please install it using `pip install openpyxl`.")
+    st.error(
+        "The 'openpyxl' library is required to read Excel files. Please install it using `pip install openpyxl`. "
+        "If you're deploying this app, ensure 'openpyxl' is included in your `requirements.txt` file."
+    )
     st.stop()
 
 # Set up Our App
