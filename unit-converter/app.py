@@ -44,3 +44,15 @@ def convert_temperature(value, from_unit, to_unit):
         return value
 
 
+# Streamlit app
+st.title("🎓Unit Converter By Kashif Ali")
+st.markdown(
+    "📎 This is a simple unit converter app built with Streamlit. You can convert between different units of length, weight, and temperature."
+)
+
+# Select conversion type
+conversion_type = st.selectbox(
+    "Select Conversion Type", ["Length", "Weight", "Temperature"]
+)
+
+
