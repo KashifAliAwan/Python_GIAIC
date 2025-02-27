@@ -76,3 +76,18 @@ value = st.number_input("Enter value", value=1.0)
 from_unit = st.selectbox("From unit", units)
 to_unit = st.selectbox("To unit", units)
 
+# Perform conversion
+if st.button("Convert"):
+    if conversion_type == "Length":
+        result = convert_length(value, from_unit, to_unit)
+    elif conversion_type == "Weight":
+        result = convert_weight(value, from_unit, to_unit)
+    elif conversion_type == "Temperature":
+        result = convert_temperature(value, from_unit, to_unit)
+    st.success(f"Converted value: {result:.2f} {to_unit}")
+
+# Footer
+st.markdown("---")
+st.markdown(
+    "#### Check out my GitHub profile for more projects:😎 [Kashif Ali Awan](https://github.com/kashifaliawan)"
+)
