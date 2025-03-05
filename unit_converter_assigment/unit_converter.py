@@ -145,3 +145,55 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
+# Main content
+with st.container():
+    st.markdown('<div class="main">', unsafe_allow_html=True)
+
+    # Category selection
+    category = st.selectbox("Select Category", ["Length", "Temperature", "Time"])
+
+    # Input value
+    value = st.number_input("Enter Value", value=1.0)
+
+    # Unit selection and conversion based on category
+    if category == "Length":
+        col1, col2 = st.columns(2)
+        with col1:
+            from_unit = st.selectbox("From Unit", ["meter", "centimeter", "kilometer", "millimeter", "mile", "yard", "foot", "inch"])
+        with col2:
+            to_unit = st.selectbox("To Unit", ["meter", "centimeter", "kilometer", "millimeter", "mile", "yard", "foot", "inch"])
+        result = convert_length(value, from_unit, to_unit)
+        st.success(f"**Converted Result:** {value} {from_unit} = {result:.4f} {to_unit}")
+
+    elif category == "Temperature":
+        col1, col2 = st.columns(2)
+        with col1:
+            from_unit = st.selectbox("From Unit", ["celsius", "fahrenheit", "kelvin"])
+        with col2:
+            to_unit = st.selectbox("To Unit", ["celsius", "fahrenheit", "kelvin"])
+        result = convert_temperature(value, from_unit, to_unit)
+        st.success(f"**Converted Result:** {value} {from_unit} = {result:.4f} {to_unit}")
+
+    elif category == "Time":
+        col1, col2 = st.columns(2)
+        with col1:
+            from_unit = st.selectbox("From Unit", ["second", "millisecond", "minute", "hour", "day", "week", "month", "year"])
+        with col2:
+            to_unit = st.selectbox("To Unit", ["second", "millisecond", "minute", "hour", "day", "week", "month", "year"])
+        result = convert_time(value, from_unit, to_unit)
+        st.success(f"**Converted Result:** {value} {from_unit} = {result:.4f} {to_unit}")
+
+    # Feedback section
+    st.write("---")
+    st.write("**Feedback**")
+    feedback = st.text_area("Leave your feedback here")
+    if st.button("Submit Feedback"):
+        st.write("Thank you for your feedback!")
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+# Add Font Awesome for icons
+st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+""", unsafe_allow_html=True)
+
