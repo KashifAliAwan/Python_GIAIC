@@ -37,3 +37,19 @@ print(type(set_variable), "Set = " , set_variable)
 # Froozenset
 frozenset_variable : frozenset = frozenset({"kashif ali","ali","kashif ali",5,2,55,55,8,6,15,10,1})
 print(type(frozenset_variable),"Frozen Set = ",frozenset_variable)
+
+
+
+# String
+
+text_double: str  = "Hello, Python!" # Strings with Double Quotes (")
+text_single: str  = 'Hello, Python!' # Strings with Single Quotes (')
+text_multi: str   = '''Hello, 
+                                      Python!''' # Multi-Line Strings with Triple Quotes (''' or """)
+text_multi_1: str = """Hello, 
+                                      Python!""" # Multi-Line Strings with Triple Quotes (''' or """)
+
+print(type(text_double), " text_double   = ", text_double)    # <class 'str'>
+print(type(text_single), " text_single   = ", text_single)    # <class 'str'>
+print(type(text_multi), " text_multi    = ", text_multi)      # <class 'str'>
+print(type(text_multi_1), " text_multi_1  = ", text_multi_1)  # <class 'str'>
