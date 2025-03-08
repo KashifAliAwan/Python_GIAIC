@@ -28,3 +28,12 @@ print(type(dictionary), "Dictionary" , dictionary )
 boolean_type : bool = False
 boolean_type : bool = True
 print(type(boolean_type), "Boolean = " , boolean_type)
+
+
+# Set 
+set_variable : set = {2,3,4,5,5,6,7,8,9,10,1}
+print(type(set_variable), "Set = " , set_variable)
+
+# Froozenset
+frozenset_variable : frozenset = frozenset({"kashif ali","ali","kashif ali",5,2,55,55,8,6,15,10,1})
+print(type(frozenset_variable),"Frozen Set = ",frozenset_variable)
