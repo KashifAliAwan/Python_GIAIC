@@ -21,3 +21,10 @@ del dictionary["City"]
 # Using Dictionary Methods to Modify
 dictionary.update({"Role":"Full Stack Developer"})
 print(type(dictionary), "Dictionary" , dictionary )
+
+
+
+# Boolean
+boolean_type : bool = False
+boolean_type : bool = True
+print(type(boolean_type), "Boolean = " , boolean_type)
