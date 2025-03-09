@@ -8,3 +8,6 @@
 
 ## Data Sweeper
 ### https://datasweeper-kashifali.streamlit.app/
+
+## Password Strength
+### https://kashifaliawan-python-giaic-pass-strength-meterapp-shuyhc.streamlit.app/
