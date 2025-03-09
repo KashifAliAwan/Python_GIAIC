@@ -129,3 +129,41 @@ def main():
         unsafe_allow_html=True,
     )
 
+    # App title
+    st.title("🔐 Password Strength Meter")
+
+    # Password input
+    password = st.text_input("Enter your password:", type="password", key="password")
+
+    if password:
+        # Evaluate password strength
+        score = evaluate_password_strength(password)
+        strength, color, icon, feedback = provide_feedback(score, password)
+
+        # Display strength level with color and icon
+        st.markdown(
+            f"""
+            <div class="card">
+                <h2 style="color: {color}; text-align: center;">Password Strength: {icon} {strength} (Score: {score}/5)</h2>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # Progress bar
+        st.progress(score / 5)
+
+        # Display feedback
+        st.markdown(
+            f"""
+            <div class="card">
+                <h2 style="color: #FFFF00;">Feedback:</h2>
+                {"<br>".join(feedback)}
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+# Run the Streamlit app
+if __name__ == "__main__":
+    main()
