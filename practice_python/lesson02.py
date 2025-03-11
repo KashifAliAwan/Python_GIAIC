@@ -291,18 +291,61 @@
 # print("d == f     = True ", d == f)
 # print("d is not f = True ", d is not f)
 
-print('\n-----\n')
+# print('\n-----\n')
 
-x = [1, 2, 3]
-y = [1, 2, 3]
-z = x
-print(id(z),"Assigning value")
-print(id(x),"Orignal")
+# x = [1, 2, 3]
+# y = [1, 2, 3]
+# z = x
+# print(id(z),"Assigning value")
+# print(id(x),"Orignal")
 
-print('\n-----\n')
+# print('\n-----\n')
 
-d = [1, 2, 3]
-e = d[:]  # Creates a shallow copy
-f = [1, 2, 3]
-print(id(d),"Orignal")
-print(id(e),"Shallow Copy")
+# d = [1, 2, 3]
+# e = d[:]  # Creates a shallow copy
+# f = [1, 2, 3]
+# print(id(d),"Orignal")
+# print(id(e),"Shallow Copy")
+
+# Example 1: List of numbers
+numbers: list = [10, 20, 30, 40, 50]
+
+print("numbers           = [10, 20, 30, 40, 50]", numbers)
+print("20 in numbers     = T", 20 in numbers)
+print("100 not in numbers = T", 100 not in numbers)
+
+print("\n-----\n")
+
+# Example 2: List of fruits
+fruits: list = ["apple", "banana", "cherry", "date"]
+
+print("fruits           = ", fruits)
+print("'banana' in fruits = T", 'banana' in fruits)
+print("'grape' not in fruits = T", 'grape' not in fruits)
+
+print("\n-----\n")
+
+# Example 3: String with a phrase
+phrase: str = "Python Programming"
+
+print("phrase           = /", phrase)
+print("'Python' in phrase = T", 'Python' in phrase)
+print("'Java' not in phrase = T", 'Java' not in phrase)
+
+print("\n-----\n")
+
+# Example 4: List of mixed types
+mixed_list: list = [1, "hello", 3.14, True]
+
+print("mixed_list       = ", mixed_list)
+print("'hello' in mixed_list = T", 'hello' in mixed_list)
+print("False not in mixed_list = T", False not in mixed_list)
+
+print("\n-----\n")
+
+# Example 5: String with a sentence
+sentence: str = "The quick brown fox jumps over the lazy dog"
+
+print("sentence         = ", sentence)
+print("'fox' in sentence = T", 'fox' in sentence)
+print("'cat' not in sentence = t", 'cat' not in sentence)
