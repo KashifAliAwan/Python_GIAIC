@@ -54,74 +54,144 @@
 
 
 
-# Example 1
-a: bool = True
-b: bool = True
-print("a and b = True", a and b)
-print("a or b  = True", a or b)
-print("not a   = False", not a)
-print("Example No 01 <<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>")
 
-# Example 2
-c: bool = False
-d: bool = False
-print("c and d = False", c and d)
-print("c or d  = False", c or d)
-print("not c   = True", not c)
+# # Example 1
+# a: bool = True
+# b: bool = True
+# print("a and b = True", a and b)
+# print("a or b  = True", a or b)
+# print("not a   = False", not a)
+# print("Example No 01 <<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>")
 
-# Example 3
-e: bool = True
-f: bool = False
-print("e and f = False", e and f)
-print("e or f  = True", e or f)
-print("not e   = False", not e)
+# # Example 2
+# c: bool = False
+# d: bool = False
+# print("c and d = False", c and d)
+# print("c or d  = False", c or d)
+# print("not c   = True", not c)
 
-# Example 4
-g: bool = False
-h: bool = True
-print("g and h = False", g and h)
-print("g or h  = True", g or h)
-print("not g   = True", not g)
+# # Example 3
+# e: bool = True
+# f: bool = False
+# print("e and f = False", e and f)
+# print("e or f  = True", e or f)
+# print("not e   = False", not e)
 
-# Example 5
-i: bool = True
-j: bool = True
-print("i and j = T", i and j)
-print("i or j  = T", i or j)
-print("not i   = F", not i)
+# # Example 4
+# g: bool = False
+# h: bool = True
+# print("g and h = False", g and h)
+# print("g or h  = True", g or h)
+# print("not g   = True", not g)
 
-# Example 6
-k: bool = False
-l: bool = True
-print("k and l = F", k and l)
-print("k or l  = T", k or l)
-print("not k   = T", not k)
+# # Example 5
+# i: bool = True
+# j: bool = True
+# print("i and j = T", i and j)
+# print("i or j  = T", i or j)
+# print("not i   = F", not i)
 
-# Example 7
-m: bool = True
-n: bool = False
-print("m and n = F", m and n)
-print("m or n  = T", m or n)
-print("not m   = F", not m)
+# # Example 6
+# k: bool = False
+# l: bool = True
+# print("k and l = F", k and l)
+# print("k or l  = T", k or l)
+# print("not k   = T", not k)
+
+# # Example 7
+# m: bool = True
+# n: bool = False
+# print("m and n = F", m and n)
+# print("m or n  = T", m or n)
+# print("not m   = F", not m)
+
+# # Example 8
+# o: bool = False
+# p: bool = False
+# print("o and p = F", o and p)
+# print("o or p  = F", o or p)
+# print("not o   = T", not o)
+
+# # Example 9
+# q: bool = True
+# r: bool = True
+# print("q and r = T", q and r)
+# print("q or r  = T", q or r)
+# print("not q   = F", not q)
+
+# # Example 10
+# s: bool = False
+# t: bool = True
+# print("s and t = F", s and t)
+# print("s or t  = T", s or t)
+# print("not s   = T", not s)
+
+
+
+# # Hard Examples
+
+# # Example 1
+# a = 10
+# b = 5
+# c = 2
+# print("False",(a + b * c > 20) and (a % b == 0) or (c ** 2 != 4))
+          
+# # Example 2
+# x = 7
+# y = 3
+# z = 4
+# print("False",(x // y + z * 2 <= 10) and not (x % y == 1))
+    
+# # Example 3
+# p = 15
+# q = 4
+# r = 3
+# print("True",(p / q + r ** 2 >= 10) or (q % r == 0) and (p - q * r != 3))
+               
+# # Example 4
+# m = 20
+# n = 6
+# o = 2
+# print(not (m // n == 3) and (m % n + o ** 2 > 10) or (n * o < m))
+
+# # Example 5
+# d = 8
+# e = 3
+# f = 2
+# print((d ** e % f == 0) and (d // e + f != 5) or not (e * f > d))
+
+# # Example 6
+# g = 25
+# h = 5
+# i = 3
+# print((g / h - i ** 2 == 0) or (h % i == 0) and not (g // h < i))
+
+# # Example 7
+# j = 12
+# k = 4
+# l = 2
+# print((j % k + l ** 3 > 10) and (j // k - l == 1) or not (k * l < j))
 
 # Example 8
-o: bool = False
-p: bool = False
-print("o and p = F", o and p)
-print("o or p  = F", o or p)
-print("not o   = T", not o)
+s = 30
+t = 7
+u = 3
+print((s // t + u ** 2 <= 10) or (t % u == 1) and not (s - t * u > 10))
+#       False                     False                   True            
+# # Example 9
+# v = 16
+# w = 4
+# x = 2
+# print(True,(v ** x % w == 0) and (v // w + x != 6) or not (w * x > v))
+# #         False                False                  True
 
-# Example 9
-q: bool = True
-r: bool = True
-print("q and r = T", q and r)
-print("q or r  = T", q or r)
-print("not q   = F", not q)
+# # Example 10
+# y = 18
+# z = 5
+# a1 = 3
+# print("True",(y / z - a1 ** 2 < 0) or (z % a1 == 0) and not (y // z > a1))
+# #          False                         True                 True
 
-# Example 10
-s: bool = False
-t: bool = True
-print("s and t = F", s and t)
-print("s or t  = T", s or t)
-print("not s   = T", not s)
+
+
 
