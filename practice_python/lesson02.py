@@ -249,43 +249,49 @@
 x = [1, 2, 3]
 y = [1, 2, 3]
 z = x
-print("x is z     =  ", x is z)
-print("x is y     =  ", x is y)
-print("x == y     =  ", x == y)
-print("x is not y =  ", x is not y)
+print("x is z     = True ", x is z)
+print("x is y     = False  ", x is y)
+print("x == y     = True ", x == y)
+print("x is not y = True ", x is not y)
+print("----------")
 
 # Example 2
 a = [10, 20, 30]
 b = a
 c = [10, 20, 30]
-print("a is b     =  ", a is b)
-print("a is c     =  ", a is c)
-print("a == c     =  ", a == c)
-print("a is not c =  ", a is not c)
-
+print("a is b     = True ", a is b)
+print("a is c     = False ", a is c)
+print("a == c     = True ", a == c)
+print("a is not c = True ", a is not c)
+print("----------")
 # Example 3
 p = [5, 6, 7]
 q = [5, 6, 7]
 r = p.copy()
-print("p is q     =  ", p is q)
-print("p is r     =  ", p is r)
-print("p == q     =  ", p == q)
-print("p is not r =  ", p is not r)
-
+print("p is q     = Flase ", p is q)
+print("p is r     = False", p is r)
+print("p == q     = True ", p == q)
+print("p is not r = True ", p is not r)
+print("----------")
 # Example 4
 m = [100, 200]
 n = m
 o = [100, 200]
-print("m is n     =  ", m is n)
-print("m is o     =  ", m is o)
-print("m == o     =  ", m == o)
-print("m is not o =  ", m is not o)
-
+print("m is n     = True ", m is n)
+print("m is o     = False ", m is o)
+print("m == o     = True ", m == o)
+print("m is not o = True ", m is not o)
+print("----------")
 # Example 5
 d = [1, 2, 3]
 e = d[:]  # Creates a shallow copy
 f = [1, 2, 3]
-print("d is e     =  ", d is e)
-print("d is f     =  ", d is f)
-print("d == f     =  ", d == f)
-print("d is not f =  ", d is not f)
+print("d is e     = False ", d is e)
+print("d is f     = False ", d is f)
+print("d == f     = True ", d == f)
+print("d is not f = True ", d is not f)
+
+
+
+
+
