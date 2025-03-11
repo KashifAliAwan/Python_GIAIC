@@ -173,10 +173,10 @@
 # print((j % k + l ** 3 > 10) and (j // k - l == 1) or not (k * l < j))
 
 # Example 8
-s = 30
-t = 7
-u = 3
-print((s // t + u ** 2 <= 10) or (t % u == 1) and not (s - t * u > 10))
+# s = 30
+# t = 7
+# u = 3
+# print((s // t + u ** 2 <= 10) or (t % u == 1) and not (s - t * u > 10))
 #       False                     False                   True            
 # # Example 9
 # v = 16
@@ -193,5 +193,30 @@ print((s // t + u ** 2 <= 10) or (t % u == 1) and not (s - t * u > 10))
 # #          False                         True                 True
 
 
+# Assignment Operator
 
+# Example 1
+x = 10
+x += 5
+print("x += 5 → x = 15 ", x)
+
+# Example 2
+y = 20
+y -= 3
+print("y -= 3 → y = -17", y)
+
+# Example 3
+z = 7
+z *= 4
+print("z *= 4 → z =28", z)
+
+# Example 4
+a = 15
+a /= 3
+print("a /= 3 → a =5.0", a)
+
+# Example 5
+b = 25
+b //= 4
+print("b //= 4 → b =6", b)
 
