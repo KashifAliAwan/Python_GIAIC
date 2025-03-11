@@ -11,7 +11,6 @@
 # print(modul_division)
 
 
-
 # # Arithmetic Operators
 
 # a: int = 10
@@ -37,7 +36,7 @@
 # print("a >= b = False", a >= b)  # Greater than or equal
 # print("a <= b = True", a <= b)  # Less than or equal
 
-#Hard Example
+# Hard Example
 
 # a: int = 10
 # b: int = 5
@@ -50,9 +49,6 @@
 # print("(a // b) * c <= a + b + c =  False", (a // b) * c <= a + b + c)  # Check if (10 // 5) * 20 <= 10 + 5 + 20 <><> 40
 # print("a * (b + c) >= c ** 2  False= ", a * (b + c) >= c ** 2) # Check if 10 * (5 + 20) >= 20^2
 # print("(a + c) // b == a = False", (a + c) // b == a)        # Check if (10 + 20) // 5 equals 10
-
-
-
 
 
 # # Example 1
@@ -127,7 +123,6 @@
 # print("not s   = T", not s)
 
 
-
 # # Hard Examples
 
 # # Example 1
@@ -135,19 +130,19 @@
 # b = 5
 # c = 2
 # print("False",(a + b * c > 20) and (a % b == 0) or (c ** 2 != 4))
-          
+
 # # Example 2
 # x = 7
 # y = 3
 # z = 4
 # print("False",(x // y + z * 2 <= 10) and not (x % y == 1))
-    
+
 # # Example 3
 # p = 15
 # q = 4
 # r = 3
 # print("True",(p / q + r ** 2 >= 10) or (q % r == 0) and (p - q * r != 3))
-               
+
 # # Example 4
 # m = 20
 # n = 6
@@ -177,7 +172,7 @@
 # t = 7
 # u = 3
 # print((s // t + u ** 2 <= 10) or (t % u == 1) and not (s - t * u > 10))
-#       False                     False                   True            
+#       False                     False                   True
 # # Example 9
 # v = 16
 # w = 4
@@ -195,28 +190,55 @@
 
 # Assignment Operator
 
+# # Example 1
+# x = 10
+# x += 5
+# print("x += 5 → x = 15 ", x)
+
+# # Example 2
+# y = 20
+# y -= 3
+# print("y -= 3 → y = -17", y)
+
+# # Example 3
+# z = 7
+# z *= 4
+# print("z *= 4 → z =28", z)
+
+# # Example 4
+# a = 15
+# a /= 3
+# print("a /= 3 → a =5.0", a)
+
+# # Example 5
+# b = 25
+# b //= 4
+# print("b //= 4 → b =6", b)
+
+
+# Hard Examples
+
 # Example 1
 x = 10
-x += 5
-print("x += 5 → x = 15 ", x)
+x += 5 * 2  # Equivalent to x = x + (5 * 2)
+print("x += 5 * 2 → x = 20 ", x)
 
 # Example 2
 y = 20
-y -= 3
-print("y -= 3 → y = -17", y)
+y -= 3**2  # Equivalent to y = y - (3 ** 2)
+print(f"y -= 3 ** 2 → y = 11 > {y} ")
 
 # Example 3
 z = 7
-z *= 4
-print("z *= 4 → z =28", z)
+z *= 4 + 2  # Equivalent to z = z * (4 + 2)
+print(f"z *= 4 + 2 → z = 42 > {z}")
 
 # Example 4
 a = 15
-a /= 3
-print("a /= 3 → a =5.0", a)
+a /= 3 % 2  # Equivalent to a = a / (3 % 2)
+print("a /= 3 % 2 → a =15", a)
 
 # Example 5
 b = 25
-b //= 4
-print("b //= 4 → b =6", b)
-
+b //= 4 + 1  # Equivalent to b = b // (4 + 1)
+print("b //= 4 + 1 → b =5", b)
