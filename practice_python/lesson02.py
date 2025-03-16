@@ -307,45 +307,123 @@
 # print(id(d),"Orignal")
 # print(id(e),"Shallow Copy")
 
-# Example 1: List of numbers
-numbers: list = [10, 20, 30, 40, 50]
+# # Example 1: List of numbers
+# numbers: list = [10, 20, 30, 40, 50]
 
-print("numbers           = [10, 20, 30, 40, 50]", numbers)
-print("20 in numbers     = T", 20 in numbers)
-print("100 not in numbers = T", 100 not in numbers)
+# print("numbers           = [10, 20, 30, 40, 50]", numbers)
+# print("20 in numbers     = T", 20 in numbers)
+# print("100 not in numbers = T", 100 not in numbers)
 
-print("\n-----\n")
+# print("\n-----\n")
 
-# Example 2: List of fruits
-fruits: list = ["apple", "banana", "cherry", "date"]
+# # Example 2: List of fruits
+# fruits: list = ["apple", "banana", "cherry", "date"]
 
-print("fruits           = ", fruits)
-print("'banana' in fruits = T", 'banana' in fruits)
-print("'grape' not in fruits = T", 'grape' not in fruits)
+# print("fruits           = ", fruits)
+# print("'banana' in fruits = T", 'banana' in fruits)
+# print("'grape' not in fruits = T", 'grape' not in fruits)
 
-print("\n-----\n")
+# print("\n-----\n")
 
-# Example 3: String with a phrase
-phrase: str = "Python Programming"
+# # Example 3: String with a phrase
+# phrase: str = "Python Programming"
 
-print("phrase           = /", phrase)
-print("'Python' in phrase = T", 'Python' in phrase)
-print("'Java' not in phrase = T", 'Java' not in phrase)
+# print("phrase           = /", phrase)
+# print("'Python' in phrase = T", 'Python' in phrase)
+# print("'Java' not in phrase = T", 'Java' not in phrase)
 
-print("\n-----\n")
+# print("\n-----\n")
 
-# Example 4: List of mixed types
-mixed_list: list = [1, "hello", 3.14, True]
+# # Example 4: List of mixed types
+# mixed_list: list = [1, "hello", 3.14, True]
 
-print("mixed_list       = ", mixed_list)
-print("'hello' in mixed_list = T", 'hello' in mixed_list)
-print("False not in mixed_list = T", False not in mixed_list)
+# print("mixed_list       = ", mixed_list)
+# print("'hello' in mixed_list = T", 'hello' in mixed_list)
+# print("False not in mixed_list = T", False not in mixed_list)
 
-print("\n-----\n")
+# print("\n-----\n")
 
-# Example 5: String with a sentence
-sentence: str = "The quick brown fox jumps over the lazy dog"
+# # Example 5: String with a sentence
+# sentence: str = "The quick brown fox jumps over the lazy dog"
 
-print("sentence         = ", sentence)
-print("'fox' in sentence = T", 'fox' in sentence)
-print("'cat' not in sentence = t", 'cat' not in sentence)
+# print("sentence         = ", sentence)
+# print("'fox' in sentence = T", 'fox' in sentence)
+# print("'cat' not in sentence = t", 'cat' not in sentence)
+
+
+
+# Example 1: Mixed list with nested lists and strings
+# mixed_data: list = [1, "hello", [5, 6, 7], "world", False]
+
+# print("mixed_data       = ", mixed_data)
+# print("'hello' in mixed_data = True", 'hello' in mixed_data)
+# print("[5, 6, 7] not in mixed_data = False", [5, 6, 7] not in mixed_data)
+# print("'world' in mixed_data[2] = False ", 'Kashif Ali' in mixed_data[2])
+
+# print("\n-----\n")
+
+# # Example 2: Complex string with substring checks
+# complex_string: str = "The quick brown fox jumps over the lazy dog"
+
+# print("complex_string   = ", complex_string)
+# print("'quick' in complex_string = True ", 'quick' in complex_string)
+# print("'fox' not in complex_string = False ", 'fox' not in complex_string)
+# print("'cat' in complex_string[10:20] = False ", 'cat' in complex_string[10:20])
+
+
+# slicing_valu:list=["Kashif Ali",2,"Awan",False]
+# print(slicing_valu[2][0:2])
+
+
+# Example 1: Tuple (Immutable and Nested)
+# Nested tuple with mixed data types
+# nested_tuple: tuple = (1, "apple", (3.14, [5, 6]), {"key": "value"}, True)
+
+# print("nested_tuple      = ", nested_tuple)
+# print("'apple' in nested_tuple = True", 'apple' in nested_tuple)
+# print("(3.14, [5, 6]) not in nested_tuple = Flse", (3.14, [5, 6]) not in nested_tuple)
+# print("'key' in nested_tuple[3] = True", 'key' in nested_tuple[3])
+
+# # Example 2: Set (Unique and Unordered)
+# # Set with mixed data types and nested structures
+# mixed_set: set = {1, "hello", (2, 3), frozenset({4, 5})}
+
+# print("mixed_set         = ", mixed_set)
+# print("(2, 3) in mixed_set = True", (2, 3) in mixed_set)
+# print("frozenset({4, 5}) not in mixed_set = False", frozenset({4, 5}) not in mixed_set)
+# print("'world' in mixed_set = False ", 'world' in mixed_set)
+
+# # Example 3: Dictionary (Key-V0alue Pairs)
+# # Nested dictionary with mixed data types
+# nested_dict: dict = {
+#     "name": "Alice",
+#     "age": 25,
+#     "skills": {"Python", "Java", "SQL"},
+#     "address": {"city": "Wonderland", "zip": 12345}
+# }
+
+# print("nested_dict       = ", nested_dict)
+# print("'age' in nested_dict = True", 'age' in nested_dict)
+# print("'Python' in nested_dict['skills'] =True ", 'Python' in nested_dict['skills'])
+# print("'city' not in nested_dict['address'] = False", 'city' not in nested_dict['address'])
+
+# name = "Kashif Ali"
+# _age = 21
+# salary2k25 = 4000
+# dictionary :dict = {
+#     "Name" : name,
+#     "Age" : _age,
+#     "Salary" : salary2k25
+# }
+# dtol= tuple(dictionary.values())
+# print(dtol[1:4])
+# print(dtol)
+
+
+# import keyword
+
+# # Line continuation (`\`) allows printing a statement over multiple lines, improving code readability without breaking the string.
+# print("The list of keywords is : ")
+
+# # printing all keywords at once using "kwlist()"
+# print(keyword.kwlist)
